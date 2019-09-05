@@ -1,0 +1,554 @@
+[Wed Oct 20 22:11:38 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 0:03:50 2010] [IP 127.0.0.1] Severity: 2  --> include_once(D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:03:50 2010] [IP 127.0.0.1] Severity: 2  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:11:18 2010] [IP 127.0.0.1] Severity: 2  --> include_once(D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:11:18 2010] [IP 127.0.0.1] Severity: 2  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:18:44 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/sunflowerbiz_install_task.php
+MySQL error: 1067 - Invalid default value for 'export'
+
+ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;, 1067, Invalid default value for 'export') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;) called at [D:\myphp\inkjetfly\sunflowerbiz_install_task.php:40]
+
+
+[Thu Oct 21 0:19:12 2010] [IP 127.0.0.1] Severity: 2  --> include(D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:19:12 2010] [IP 127.0.0.1] Severity: 2  --> include() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:20:05 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/sunflowerbiz_install_task.php
+MySQL error: 1067 - Invalid default value for 'export'
+
+ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;, 1067, Invalid default value for 'export') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(ALTER TABLE  `orders` ADD  `export` int(1)  NULL DEFAULT '' ;) called at [D:\myphp\inkjetfly\sunflowerbiz_install_task.php:46]
+
+
+[Thu Oct 21 0:20:26 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/sunflowerbiz_install_task.php
+MySQL error: 1067 - Invalid default value for 'export'
+
+ALTER TABLE  `orders` ADD  `export` INT(1)  NULL DEFAULT '' ;
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(ALTER TABLE  `orders` ADD  `export` INT(1)  NULL DEFAULT '' ;, 1067, Invalid default value for 'export') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(ALTER TABLE  `orders` ADD  `export` INT(1)  NULL DEFAULT '' ;) called at [D:\myphp\inkjetfly\sunflowerbiz_install_task.php:44]
+
+
+[Thu Oct 21 0:21:37 2010] [IP 127.0.0.1] Severity: 2  --> include(D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:21:37 2010] [IP 127.0.0.1] Severity: 2  --> include() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:25:26 2010] [IP 127.0.0.1] Severity: 2  --> include_once(D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:25:26 2010] [IP 127.0.0.1] Severity: 2  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:25:33 2010] [IP 127.0.0.1] Severity: 2  --> include(D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:25:33 2010] [IP 127.0.0.1] Severity: 2  --> include() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/admin/TransactionSummaryLogs.inc.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 243
+
+[Thu Oct 21 0:25:35 2010] [IP 127.0.0.1] Severity: 2  --> include_once(D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:25:35 2010] [IP 127.0.0.1] Severity: 2  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:25:36 2010] [IP 127.0.0.1] Severity: 2  --> include_once(D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 0:25:36 2010] [IP 127.0.0.1] Severity: 2  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'D:/myphp/inkjetfly/includes/modules/payment/paypal/functions/general.func.php' for inclusion (include_path='.;C:\php5\pear') D:\myphp\inkjetfly\admin\orders.php 610
+
+[Thu Oct 21 1:33:01 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 1:33:58 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 1:37:49 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 1:38:59 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 1:40:26 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/languages/english/informationbox.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\boxes\information_table.php 17
+
+[Thu Oct 21 1:40:57 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/index.php
+MySQL error: 1146 - Table 'inkjetfly.table_information' doesn't exist
+
+SELECT information_id, languages_id, info_title FROM TABLE_INFORMATION WHERE visible= '1' and languages_id ='1' ORDER BY v_order
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(SELECT information_id, languages_id, info_title FROM TABLE_INFORMATION WHERE visible= '1' and languages_id ='1' ORDER BY v_order, 1146, Table 'inkjetfly.table_information' doesn't exist) called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(SELECT information_id, languages_id, info_title FROM TABLE_INFORMATION WHERE visible= '1' and languages_id ='1' ORDER BY v_order) called at [D:\myphp\inkjetfly\templates\Original\boxes\information_table.php:27]
+#3  require_once(D:\myphp\inkjetfly\templates\Original\boxes\information_table.php) called at [D:\myphp\inkjetfly\includes\column_left.php:65]
+#4  require(D:\myphp\inkjetfly\includes\column_left.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:45]
+#5  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\index.php:258]
+
+
+[Thu Oct 21 1:42:41 2010] [IP 127.0.0.1] Severity: 2  --> require(templates/content/CONTENT_INFORMATION.tpl.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\main_page.tpl.php 58
+
+[Thu Oct 21 1:43:12 2010] [IP 127.0.0.1] Severity: 2  --> require(templates/content/information.tpl.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\main_page.tpl.php 58
+
+[Thu Oct 21 1:43:48 2010] [IP 127.0.0.1] Severity: 2  --> require(templates/content/information.tpl.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\Original\main_page.tpl.php 58
+
+[Thu Oct 21 1:46:27 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+[Thu Oct 21 2:08:19 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:143]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:09:10 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:143]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:12:46 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:144]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:12:55 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:144]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:13:15 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:144]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:13:22 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.language_id' in 'where clause'
+
+select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1'
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1', 1054, Unknown column 'popt.language_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select count(*) as total from products_options popt, products_attributes patrib where patrib.products_id='117' and patrib.options_id = popt.products_options_id and popt.language_id = '1') called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:144]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:58]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 2:51:25 2010] [IP 127.0.0.1] Severity: 2  --> shipping::include(includes/modules/shipping/upsxml.php) [<a href='function.shipping-include'>function.shipping-include</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\includes\classes\shipping.php 52
+
+[Thu Oct 21 2:51:25 2010] [IP 127.0.0.1] Severity: 2  --> shipping::include() [<a href='function.include'>function.include</a>]: Failed opening 'includes/modules/shipping/upsxml.php' for inclusion (include_path='D:\myphp\inkjetfly\ext\HTMLPurifier;.;C:\php5\pear') D:\myphp\inkjetfly\includes\classes\shipping.php 52
+
+[Thu Oct 21 2:54:08 2010] [IP 127.0.0.1] Severity: 2  --> require_once(includes/classes/xml_5.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\includes\modules\shipping\upsxml.php 25
+
+[Thu Oct 21 2:56:47 2010] [IP 127.0.0.1] Severity: 2  --> require_once(includes/classes/xml_5.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\includes\modules\shipping\upsxml.php 25
+
+[Thu Oct 21 2:56:53 2010] [IP 127.0.0.1] Severity: 2  --> require_once(includes/classes/xml_5.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\includes\modules\shipping\upsxml.php 25
+
+[Thu Oct 21 2:57:33 2010] [IP 127.0.0.1] Severity: 2  --> require_once(includes/classes/xml_5.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\includes\modules\shipping\upsxml.php 25
+
+[Thu Oct 21 4:13:16 2010] [IP 127.0.0.1] Severity: 2  --> require(includes/login_pwa.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory D:\myphp\inkjetfly\templates\content\login.tpl.php 32
+
+[Thu Oct 21 4:47:00 2010] [IP 127.0.0.1] Severity: 2  --> mysql_fetch_array(): supplied argument is not a valid MySQL result resource D:\myphp\inkjetfly\includes\functions\database.php 143
+
+[Thu Oct 21 4:56:55 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost)) called at [D:\myphp\inkjetfly\checkout_process.php:151]
+
+
+[Thu Oct 21 4:58:27 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost)) called at [D:\myphp\inkjetfly\checkout_process.php:151]
+
+
+[Thu Oct 21 4:58:37 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost)) called at [D:\myphp\inkjetfly\checkout_process.php:151]
+
+
+[Thu Oct 21 4:59:35 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost,[export] => 0,[emailed] => 0)) called at [D:\myphp\inkjetfly\checkout_process.php:153]
+
+
+[Thu Oct 21 4:59:43 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost,[export] => 0,[emailed] => 0)) called at [D:\myphp\inkjetfly\checkout_process.php:153]
+
+
+[Thu Oct 21 4:59:48 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp, export, emailed) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost', '0', '0'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost,[export] => 0,[emailed] => 0)) called at [D:\myphp\inkjetfly\checkout_process.php:153]
+
+
+[Thu Oct 21 5:03:28 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/checkout_process.php
+MySQL error: 1054 - Unknown column 'cc_start' in 'field list'
+
+insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost')
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), 1054, Unknown column 'cc_start' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(insert into orders (customers_id, customers_name, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_address_format_id, billing_name, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_address_format_id, payment_method, payment_info, cc_type, cc_owner, cc_number, cc_start, cc_issue, cc_expires, date_purchased, last_modified, orders_status, currency, delivery_telephone, delivery_fax, delivery_email_address, billing_telephone, billing_fax, billing_email_address, currency_value, ipaddy, ipisp) values ('1', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '123456789', 'test@test.com', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'test test', '', 'testt', '', 'Florida', '32937', 'Florida', 'United States', '2', 'Check/Money Order', 'Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.', '', '', '', '', '', '', now(), now(), '2', 'USD', '123456789', '', 'test@test.com', '123456789', '', 'test@test.com', '1.00000000', '127.0.0.1', '.localhost'), db_link) called at [D:\myphp\inkjetfly\includes\functions\database.php:113]
+#3  tep_db_perform(orders, Array ([customers_id] => 1,[customers_name] => test test,[customers_company] => ,[customers_street_address] => testt,[customers_suburb] => ,[customers_city] => Florida,[customers_postcode] => 32937,[customers_state] => Florida,[customers_country] => United States,[customers_telephone] => 123456789,[customers_email_address] => test@test.com,[customers_address_format_id] => 2,[delivery_name] => test test,[delivery_company] => ,[delivery_street_address] => testt,[delivery_suburb] => ,[delivery_city] => Florida,[delivery_postcode] => 32937,[delivery_state] => Florida,[delivery_country] => United States,[delivery_address_format_id] => 2,[billing_name] => test test,[billing_company] => ,[billing_street_address] => testt,[billing_suburb] => ,[billing_city] => Florida,[billing_postcode] => 32937,[billing_state] => Florida,[billing_country] => United States,[billing_address_format_id] => 2,[payment_method] => Check/Money Order,[payment_info] => Make Payable To:&nbsp;Make Payable to:<br><br>Send To:<br>Inkjetfly.com<br />
+467 Saratoga Ave. #117,<br />
+San Jose, CA 95129<br />
+(408) 512-4088<br><br>Your order will not ship until we receive payment.,[cc_type] => ,[cc_owner] => ,[cc_number] => ,[cc_start] => ,[cc_issue] => ,[cc_expires] => ,[date_purchased] => now(),[last_modified] => now(),[orders_status] => 2,[currency] => USD,[delivery_telephone] => 123456789,[delivery_fax] => ,[delivery_email_address] => test@test.com,[billing_telephone] => 123456789,[billing_fax] => ,[billing_email_address] => test@test.com,[currency_value] => 1.00000000,[ipaddy] => 127.0.0.1,[ipisp] => .localhost)) called at [D:\myphp\inkjetfly\checkout_process.php:151]
+
+
+[Thu Oct 21 5:06:46 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+[Thu Oct 21 5:06:47 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+[Thu Oct 21 13:03:53 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:03:53 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:03:55 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:03:55 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:04:00 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:04:00 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:04:02 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:04:02 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:04:13 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:04:13 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:04:42 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:04:42 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:04:45 2010] [IP 127.0.0.1] Severity: 2  --> reset() [<a href='function.reset'>function.reset</a>]: Passed variable is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 146
+
+[Thu Oct 21 13:04:45 2010] [IP 127.0.0.1] Severity: 2  --> Variable passed to each() is not an array or object D:\myphp\inkjetfly\templates\Original\header.php 147
+
+[Thu Oct 21 13:05:29 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:06:06 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:06:24 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:07:06 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:07:39 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:07:46 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'field list'
+
+select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'field list') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, popt.products_options_name from products_options popt, products_attributes patrib where patrib.products_id='132' and patrib.options_id = popt.products_options_id and popt.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:18:58 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.products_options_name' in 'order clause'
+
+select distinct popt.products_options_id, pot.products_options_name from products_options popt, products_attributes patrib,products_options_text pot where patrib.products_id='132' and patrib.options_id = popt.products_options_id and pot.language_id = '1'  and pot.language_id = '1' order by popt.products_options_name
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id, pot.products_options_name from products_options popt, products_attributes patrib,products_options_text pot where patrib.products_id='132' and patrib.options_id = popt.products_options_id and pot.language_id = '1'  and pot.language_id = '1' order by popt.products_options_name, 1054, Unknown column 'popt.products_options_name' in 'order clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id, pot.products_options_name from products_options popt, products_attributes patrib,products_options_text pot where patrib.products_id='132' and patrib.options_id = popt.products_options_id and pot.language_id = '1'  and pot.language_id = '1' order by popt.products_options_name) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:154]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:23:17 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'pa.options_id' in 'where clause'
+
+select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = pa.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = pa.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id, 1054, Unknown column 'pa.options_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = pa.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:157]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
+[Thu Oct 21 13:23:31 2010] [IP 127.0.0.1] Severity: 2  --> mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() D:\myphp\inkjetfly\includes\classes\email.php 564
+
+#0  _error_handler(Query Error reported on page /inkjetfly/product_info.php
+MySQL error: 1054 - Unknown column 'popt.options_id' in 'where clause'
+
+select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = popt.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id
+
+) called at [D:\myphp\inkjetfly\includes\functions\database.php:43]
+#1  tep_db_error(select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = popt.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id, 1054, Unknown column 'popt.options_id' in 'where clause') called at [D:\myphp\inkjetfly\includes\functions\database.php:60]
+#2  tep_db_query(select distinct popt.products_options_id,poptt.products_options_name from products_options popt, products_attributes patrib,
+     products_options_text poptt where patrib.products_id='132' and patrib.options_id = popt.products_options_id   
+    and poptt.products_options_text_id = popt.options_id 
+    and poptt.language_id = '1' order by popt.products_options_id) called at [D:\myphp\inkjetfly\templates\content\product_info.tpl.php:157]
+#3  require(D:\myphp\inkjetfly\templates\content\product_info.tpl.php) called at [D:\myphp\inkjetfly\templates\Original\main_page.tpl.php:59]
+#4  require(D:\myphp\inkjetfly\templates\Original\main_page.tpl.php) called at [D:\myphp\inkjetfly\product_info.php:23]
+
+
