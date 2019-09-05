@@ -1,0 +1,45 @@
+UPS Worldship XML Auto Import
+written by Thuan V. Nguyen, http://www.a8le.com
+**********************************************************************************
+
+Upgrade Instructions
+**********************************************************************************
+PLEASE BACKUP YOUR FILES
+
+1.) Open ups_print_worldship_xml.php (from new version folder) ... enter in your data ... marked "editable variables"
+2.) Copy ups_print_worldship_xml.php to /catalog/admin/includes/ (YES, overwrite old copy)
+3.) Copy button_export_to_ups.gif to /catalog/admin/includes/languages/english/images/buttons/ (YES, overwrite old copy)
+4.) In admin/orders.php
+
+-----
+FIND:
+-----
+
+      <tr>
+       <td colspan="2" align="right"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '">' . tep_image_button('button_export_to_ups.gif', Export_To_UPS) . '</a> '; ?><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS_EDIT, 'oID=' . $_GET['oID']) . '">' . tep_image_button('button_edit.gif', IMAGE_EDIT) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_INVOICE, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_invoice.gif', IMAGE_ORDERS_INVOICE) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_PACKINGSLIP, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_packingslip.gif', IMAGE_ORDERS_PACKINGSLIP) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action'))) . '">' . tep_image_button('button_back.gif', IMAGE_BACK) . '</a> '; ?></td>
+      </tr>
+
+-------------
+REPLACE WITH:
+-------------
+
+      <tr>
+       <td colspan="2" align="right" valign="top" nowrap="nowrap">
+		<table>
+			<tr><td valign="top" nowrap="nowrap"><?php echo tep_image_button('button_export_to_ups.gif', Export_To_UPS)?></td><td><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS_EDIT, 'oID=' . $_GET['oID']) . '">' . tep_image_button('button_edit.gif', IMAGE_EDIT) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_INVOICE, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_invoice.gif', IMAGE_ORDERS_INVOICE) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_PACKINGSLIP, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_packingslip.gif', IMAGE_ORDERS_PACKINGSLIP) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action'))) . '">' . tep_image_button('button_back.gif', IMAGE_BACK) . '</a> '; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=GND' . '" style="font-size:larger;">' . 'UPS Ground' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=3DS' . '">' . 'UPS 3 Day Select' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DA' . '">' . 'UPS 2nd Day Air' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DM' . '">' . 'UPS 2nd Day Air A.M.' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DP' . '">' . 'UPS Next Day Air Saver' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DA' . '">' . 'UPS Next Day Air' . '</a> '; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DM' . '">' . 'UPS Next Day Air Early A.M.' . '</a>'; ?></td></tr>
+		</table>		   
+	   </td>
+      </tr>
+
+**********************************************************************************
+Thats it, enjoy.
+-Thuan
+
+

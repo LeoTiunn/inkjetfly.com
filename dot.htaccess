@@ -1,0 +1,41 @@
+# $Id: .htaccess,v 1.2 2003/09/24 13:57:00 wilt Exp $
+#
+# This is used with Apache WebServers
+#
+# For this to work, you must include the parameter 'Options' to
+# the AllowOverride configuration
+#
+# Example:
+#
+# <Directory "/usr/local/apache/htdocs">
+#   AllowOverride Options
+# </Directory>
+#
+# 'All' will also work. (This configuration is in the
+# apache/conf/httpd.conf file)
+
+# The following makes adjustments to the SSL protocol for Internet
+# Explorer browsers
+
+<IfModule mod_setenvif.c>
+  <IfDefine SSL>
+    SetEnvIf User-Agent ".*MSIE.*" \
+             nokeepalive ssl-unclean-shutdown \
+             downgrade-1.0 force-response-1.0
+  </IfDefine>
+</IfModule>
+
+# PHP configuration values
+
+<IfModule mod_php5.c>
+  php_flag register_long_arrays Off
+  php_flag register_globals Off 
+  php_flag display_errors Off
+</IfModule>
+
+<IfModule mod_php4.c>
+  php_value session.use_trans_sid 0
+  php_value register_globals 0
+  php_flag display_errors Off
+  php_flag track_errors Off
+</IfModule>

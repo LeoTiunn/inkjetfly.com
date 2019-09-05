@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class SEO_URL</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class SEO_URL
+</h2> (line <span class="linenumber"><a href="../__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a417">417</a></span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_classes_seo_class_php.html">seo.class.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Ultimate SEO URLs Base Class</h5>
+<div class="desc"><p>Ultimate SEO URLs offers search engine optimized URLS for osCommerce  based applications. Other features include optimized performance and  automatic redirect script.</p></div>
+<ul>
+		<li><strong>author:</strong> - Bobby Easland</li>
+		<li><strong>copyright:</strong> - Copyright 2005, Bobby Easland</li>
+		<li><strong>link:</strong> - <a href="http://www.oscommerce-freelancers.com/">osCommerce-Freelancers</a></li>
+		<li><strong>version:</strong> - 2.1</li>
+		<li><strong>license:</strong> - <a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$attributes" title="details" class="property"><strong>$attributes</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$base_url" title="details" class="property"><strong>$base_url</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$base_url_ssl" title="details" class="property"><strong>$base_url_ssl</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$cache" title="details" class="property"><strong>$cache</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$cache_file" title="details" class="property"><strong>$cache_file</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">resource</span>
+    <a href="#var$cache_query" title="details" class="property"><strong>$cache_query</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$data" title="details" class="property"><strong>$data</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">object</span>
+    <a href="#var$DB" title="details" class="property"><strong>$DB</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">object</span>
+    <a href="#var$installer" title="details" class="property"><strong>$installer</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">boolean</span>
+    <a href="#var$is_seopage" title="details" class="property"><strong>$is_seopage</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">integer</span>
+    <a href="#var$languages_id" title="details" class="property"><strong>$languages_id</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">boolean</span>
+    <a href="#var$need_redirect" title="details" class="property"><strong>$need_redirect</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$path_info" title="details" class="property"><strong>$path_info</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$performance" title="details" class="property"><strong>$performance</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$real_uri" title="details" class="property"><strong>$real_uri</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$reg_anchors" title="details" class="property"><strong>$reg_anchors</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">float</span>
+    <a href="#var$timestamp" title="details" class="property"><strong>$timestamp</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$uri" title="details" class="property"><strong>$uri</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$uri_parsed" title="details" class="property"><strong>$uri_parsed</strong></a>
+</div>
+<hr />
+<a name="var$attributes" id="var$attributes"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$attributes</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a432">432</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$attributes array contains all the required settings for class</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$base_url" id="var$base_url"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$base_url</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a437">437</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$base_url is the NONSSL URL for site</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$base_url_ssl" id="var$base_url_ssl"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$base_url_ssl</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a442">442</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$base_url_ssl is the secure URL for the site</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$cache" id="var$cache"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a422">422</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$cache is the per page data array that contains all of the previously stripped titles</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$cache_file" id="var$cache_file"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_file</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a467">467</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$cache_file is the basename of the cache database entry</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$cache_query" id="var$cache_query"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_query</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a462">462</a></span>)
+ </h4>
+<h4>Data type : resource</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$cache_query is the resource_id used for database cache logic</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$data" id="var$data"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$data</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a472">472</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$data array contains all records retrieved from database cache</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$DB" id="var$DB"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$DB</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a507">507</a></span>)
+ </h4>
+<h4>Data type : object</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$DB is the database object</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$installer" id="var$installer"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$installer</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a512">512</a></span>)
+ </h4>
+<h4>Data type : object</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$installer is the installer object</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$is_seopage" id="var$is_seopage"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$is_seopage</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a482">482</a></span>)
+ </h4>
+<h4>Data type : boolean</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$is_seopage holds value as to whether page is in allowed SEO pages</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$languages_id" id="var$languages_id"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$languages_id</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a427">427</a></span>)
+ </h4>
+<h4>Data type : integer</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$languages_id contains the language_id for this instance</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$need_redirect" id="var$need_redirect"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$need_redirect</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a477">477</a></span>)
+ </h4>
+<h4>Data type : boolean</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$need_redirect determines whether the URL needs to be redirected</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$path_info" id="var$path_info"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$path_info</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a502">502</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$path_info contains the getenv('PATH_INFO') value</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$performance" id="var$performance"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$performance</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a447">447</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$performance array contains evaluation metric data</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$real_uri" id="var$real_uri"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$real_uri</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a492">492</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$real_uri contains the $_SERVER['SCRIPT_NAME'] . '?' . $_SERVER['QUERY_STRING'] value</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$reg_anchors" id="var$reg_anchors"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$reg_anchors</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a457">457</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$reg_anchors holds the anchors used by the .htaccess rewrites</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$timestamp" id="var$timestamp"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$timestamp</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a452">452</a></span>)
+ </h4>
+<h4>Data type : float</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$timestamp simply holds the temp variable for time calculations</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$uri" id="var$uri"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$uri</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a487">487</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$uri contains the $_SERVER['REQUEST_URI'] value</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$uri_parsed" id="var$uri_parsed"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$uri_parsed</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a497">497</a></span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$uri_parsed contains the parsed uri value array</h5>
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+				
+    <div class="method-definition">
+            <span class="method-result">SEO_URL</span>
+        <a href="#methodSEO_URL" title="details" class="method-name">SEO_URL</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$languages_id</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodadd_sid" title="details" class="method-name">add_sid</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$link</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$add_session_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$connection</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$separator</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodcache_gc" title="details" class="method-name">cache_gc</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodcalculate_performance" title="details" class="method-name">calculate_performance</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodcheck_redirect" title="details" class="method-name">check_redirect</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodcheck_seo_page" title="details" class="method-name">check_seo_page</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodconvert_time" title="details" class="method-name">convert_time</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$expires</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methoddo_redirect" title="details" class="method-name">do_redirect</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodexpand" title="details" class="method-name">expand</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$set</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_articles_cache" title="details" class="method-name">generate_articles_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_categories_cache" title="details" class="method-name">generate_categories_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_information_cache" title="details" class="method-name">generate_information_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_manufacturers_cache" title="details" class="method-name">generate_manufacturers_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_products_cache" title="details" class="method-name">generate_products_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgenerate_topics_cache" title="details" class="method-name">generate_topics_cache</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodGetParentCategories" title="details" class="method-name">GetParentCategories</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$categories</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$categories_id</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_article_name" title="details" class="method-name">get_article_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$aID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodget_cache" title="details" class="method-name">get_cache</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'GLOBAL'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local_memory</span> = <span class="var-default">false</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodget_cache_memory" title="details" class="method-name">get_cache_memory</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'RETURN'</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_category_name" title="details" class="method-name">get_category_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">&$cID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_full_cPath" title="details" class="method-name">get_full_cPath</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cID</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">&$original</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_information_name" title="details" class="method-name">get_information_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$iID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_manufacturer_name" title="details" class="method-name">get_manufacturer_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$mID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_product_name" title="details" class="method-name">get_product_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$pID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodget_topic_name" title="details" class="method-name">get_topic_name</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$tID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodhref_link" title="details" class="method-name">href_link</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$parameters</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$connection</span> = <span class="var-default">'NONSSL'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$add_session_id</span> = <span class="var-default">true</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodimplode_assoc" title="details" class="method-name">implode_assoc</a>
+        (<span class="var-type">array</span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$inner_glue</span> = <span class="var-default">'='</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$outer_glue</span> = <span class="var-default">'&'</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodis_attribute_string" title="details" class="method-name">is_attribute_string</a>
+        (<span class="var-type">integer</span>&nbsp;<span class="var-name">$pID</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodis_cached" title="details" class="method-name">is_cached</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">&$is_cached</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">&$is_expired</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodis_cPath_string" title="details" class="method-name">is_cPath_string</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$params</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodis_product_string" title="details" class="method-name">is_product_string</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$params</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodmake_url" title="details" class="method-name">make_url</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$page</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$anchor_type</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">'.html'</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">&$separator</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodneed_redirect" title="details" class="method-name">need_redirect</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodnot_null" title="details" class="method-name">not_null</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodoutput_string" title="details" class="method-name">output_string</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$translate</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$protected</span> = <span class="var-default">false</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$sting</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodparse_input_field_data" title="details" class="method-name">parse_input_field_data</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$parse</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodparse_parameters" title="details" class="method-name">parse_parameters</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$page</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$separator</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodparse_path" title="details" class="method-name">parse_path</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$path_info</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodPrintArray" title="details" class="method-name">PrintArray</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$heading</span> = <span class="var-default">''</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodprofile" title="details" class="method-name">profile</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodsave_cache" title="details" class="method-name">save_cache</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'RETURN'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$gzip</span> = <span class="var-default">1</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$global</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$expires</span> = <span class="var-default">'30/days'</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodSessionID" title="details" class="method-name">SessionID</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$sessid</span> = <span class="var-default">''</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodSessionName" title="details" class="method-name">SessionName</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodshort_name" title="details" class="method-name">short_name</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">3</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodstart" title="details" class="method-name">start</a>
+        (<span class="var-type">float</span>&nbsp;<span class="var-name">&$start_time</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodstock_href_link" title="details" class="method-name">stock_href_link</a>
+        ([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$parameters</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$connection</span> = <span class="var-default">'NONSSL'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$add_session_id</span> = <span class="var-default">true</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$search_engine_safe</span> = <span class="var-default">true</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodstop" title="details" class="method-name">stop</a>
+        (<span class="var-type">float</span>&nbsp;<span class="var-name">$start</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">&$time</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodstrip" title="details" class="method-name">strip</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodSEO_URL" id="methodSEO_URL"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor SEO_URL</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a520">520</a></span>)
+ </h4> 
+<h4><i>SEO_URL</i> <strong>SEO_URL(
+integer
+$languages_id)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>SEO_URL class constructor</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $languages_id</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodadd_sid" id="methodadd_sid"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method add_sid</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a728">728</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>add_sid(
+string
+$link, boolean
+$add_session_id, string
+$connection, string
+$separator)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to append session ID if needed</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $link</strong>: </li>
+			<li><strong>boolean $add_session_id</strong>: </li>
+			<li><strong>string $connection</strong>: </li>
+			<li><strong>string $separator</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.2</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodcache_gc" id="methodcache_gc"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method cache_gc</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1702">1702</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>cache_gc(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to perform basic garbage collection for database cache system</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodcalculate_performance" id="methodcalculate_performance"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method calculate_performance</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1217">1217</a></span>)
+ </h4> 
+<h4><i>mixed</i> <strong>calculate_performance(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function used to calculate and output the performance metrics of the class</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Output of performance data wrapped in HTML pre tags</li>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodcheck_redirect" id="methodcheck_redirect"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method check_redirect</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1765">1765</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>check_redirect(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to initialize the redirect logic</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodcheck_seo_page" id="methodcheck_seo_page"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method check_seo_page</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1818">1818</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>check_seo_page(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if it's a valid redirect page</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodconvert_time" id="methodconvert_time"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method convert_time</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1713">1713</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>convert_time(
+string
+$expires)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to convert time for cache methods</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $expires</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methoddo_redirect" id="methoddo_redirect"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method do_redirect</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1857">1857</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>do_redirect(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to perform redirect</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodexpand" id="methodexpand"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method expand</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1250">1250</a></span>)
+ </h4> 
+<h4><i>mixed</i> <strong>expand(
+string
+$set)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to expand the SEO_CONVERT_SET group</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $set</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_articles_cache" id="methodgenerate_articles_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_articles_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1494">1494</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_articles_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate articles cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_categories_cache" id="methodgenerate_categories_cache"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_categories_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1461">1461</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_categories_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate categories cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_information_cache" id="methodgenerate_information_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_information_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1542">1542</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_information_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate information cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_manufacturers_cache" id="methodgenerate_manufacturers_cache"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_manufacturers_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1437">1437</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_manufacturers_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate manufacturers cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_products_cache" id="methodgenerate_products_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_products_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1413">1413</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_products_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate products cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodgenerate_topics_cache" id="methodgenerate_topics_cache"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generate_topics_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1518">1518</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>generate_topics_cache(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to generate topics cache entries</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodGetParentCategories" id="methodGetParentCategories"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method GetParentCategories</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1120">1120</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>GetParentCategories(
+mixed
+&$categories, integer
+$categories_id)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Recursion function to retrieve parent categories from category ID</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $categories</strong>: Passed by reference</li>
+			<li><strong>integer $categories_id</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_article_name" id="methodget_article_name"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_article_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1003">1003</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_article_name(
+integer
+$aID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the article name. Use evaluated cache, per page cache, or database query in that order of precedent.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $aID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_cache" id="methodget_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1610">1610</a></span>)
+ </h4> 
+<h4><i>mixed</i> <strong>get_cache(
+[string
+$name = 'GLOBAL'], [boolean
+$local_memory = false])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get cache entry</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+			<li><strong>boolean $local_memory</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_cache_memory" id="methodget_cache_memory"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_cache_memory</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1678">1678</a></span>)
+ </h4> 
+<h4><i>mixed</i> <strong>get_cache_memory(
+string
+$name, [string
+$method = 'RETURN'])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get cache from memory</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+			<li><strong>string $method</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_category_name" id="methodget_category_name"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_category_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a929">929</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_category_name(
+integer
+&$cID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the category name. Use evaluated cache, per page cache, or database query in that order of precedent</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $cID</strong>: NOTE: passed by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Stripped anchor text</li>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_full_cPath" id="methodget_full_cPath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_full_cPath</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1097">1097</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_full_cPath(
+mixed
+$cID, integer
+&$original)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to retrieve full cPath from category ID</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $cID</strong>: Could contain cPath or single category_id</li>
+			<li><strong>integer $original</strong>: Single category_id passed back by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Full cPath string</li>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_information_name" id="methodget_information_name"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_information_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1065">1065</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_information_name(
+integer
+$iID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the informatin name. Use evaluated cache, per page cache, or database query in that order of precedent.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $iID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_manufacturer_name" id="methodget_manufacturer_name"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_manufacturer_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a972">972</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_manufacturer_name(
+integer
+$mID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the manufacturer name. Use evaluated cache, per page cache, or database query in that order of precedent.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $mID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_product_name" id="methodget_product_name"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_product_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a898">898</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_product_name(
+integer
+$pID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the product name. Use evaluated cache, per page cache, or database query in that order of precedent</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $pID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Stripped anchor text</li>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodget_topic_name" id="methodget_topic_name"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_topic_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1034">1034</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>get_topic_name(
+integer
+$tID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to get the topic name. Use evaluated cache, per page cache, or database query in that order of precedent.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $tID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodhref_link" id="methodhref_link"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method href_link</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a615">615</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>href_link(
+[string
+$page = ''], [string
+$parameters = ''], [string
+$connection = 'NONSSL'], [boolean
+$add_session_id = true])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to return SEO URL link SEO'd with stock generattion for error fallback</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $page</strong>: Base script for URL</li>
+			<li><strong>string $parameters</strong>: URL parameters</li>
+			<li><strong>string $connection</strong>: NONSSL/SSL</li>
+			<li><strong>boolean $add_session_id</strong>: Switch to add osCsid</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Formed href link</li>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodimplode_assoc" id="methodimplode_assoc"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method implode_assoc</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1298">1298</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>implode_assoc(
+array
+$array, [string
+$inner_glue = '='], [string
+$outer_glue = '&'])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to implode an associative array</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $array</strong>: Associative data array</li>
+			<li><strong>string $inner_glue</strong>: </li>
+			<li><strong>string $outer_glue</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodis_attribute_string" id="methodis_attribute_string"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method is_attribute_string</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1162">1162</a></span>)
+ </h4> 
+<h4><i>boolean</i> <strong>is_attribute_string(
+integer
+$pID)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if the products_id contains an attribute</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $pID</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodis_cached" id="methodis_cached"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method is_cached</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1749">1749</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>is_cached(
+string
+$name, boolean
+&$is_cached, boolean
+&$is_expired)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if the cache is in the database and expired</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+			<li><strong>boolean $is_cached</strong>: NOTE: passed by reference</li>
+			<li><strong>boolean $is_expired</strong>: NOTE: passed by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodis_cPath_string" id="methodis_cPath_string"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method is_cPath_string</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1192">1192</a></span>)
+ </h4> 
+<h4><i>boolean</i> <strong>is_cPath_string(
+string
+$params)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if cPath is in the parameter string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $params</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodis_product_string" id="methodis_product_string"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method is_product_string</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1177">1177</a></span>)
+ </h4> 
+<h4><i>boolean</i> <strong>is_product_string(
+string
+$params)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if the params contains a products_id</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $params</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodmake_url" id="methodmake_url"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method make_url</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a879">879</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>make_url(
+string
+$page, string
+$string, string
+$anchor_type, integer
+$id, [string
+$extension = '.html'], string
+&$separator)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to return the generated SEO URL</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $page</strong>: </li>
+			<li><strong>string $string</strong>: Stripped, formed anchor</li>
+			<li><strong>string $anchor_type</strong>: Parameter type (products_id, cPath, etc.)</li>
+			<li><strong>integer $id</strong>: </li>
+			<li><strong>string $extension</strong>: Default = .html</li>
+			<li><strong>string $separator</strong>: NOTE: passed by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodneed_redirect" id="methodneed_redirect"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method need_redirect</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1787">1787</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>need_redirect(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if the URL needs to be redirected</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.2</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodnot_null" id="methodnot_null"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method not_null</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1139">1139</a></span>)
+ </h4> 
+<h4><i>boolean</i> <strong>not_null(
+mixed
+$value)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to check if a value is NULL</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland as abstracted from osCommerce-MS2.2</li>
+		</ul>
+</div>
+<a name="methodoutput_string" id="methodoutput_string"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method output_string</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1366">1366</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>output_string(
+mixed
+$string, [mixed
+$translate = false], [boolean
+$protected = false], string
+$sting)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to output a translated or sanitized string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $sting</strong>: String to be output</li>
+			<li><strong>mixed $translate</strong>: Array of translation characters</li>
+			<li><strong>boolean $protected</strong>: Switch for htemlspecialchars processing</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodparse_input_field_data" id="methodparse_input_field_data"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method parse_input_field_data</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1353">1353</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>parse_input_field_data(
+string
+$data, array
+$parse)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to translate a string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $data</strong>: String to be translated</li>
+			<li><strong>array $parse</strong>: Array of tarnslation variables</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodparse_parameters" id="methodparse_parameters"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method parse_parameters</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a762">762</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>parse_parameters(
+string
+$page, string
+$params, string
+&$separator)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>SFunction to parse the parameters into an SEO URL</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $page</strong>: </li>
+			<li><strong>string $params</strong>: </li>
+			<li><strong>string $separator</strong>: NOTE: passed by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.2</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodparse_path" id="methodparse_path"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method parse_path</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1838">1838</a></span>)
+ </h4> 
+<h4><i>array</i> <strong>parse_path(
+string
+$path_info)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to parse the path for old SEF URLs</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $path_info</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodPrintArray" id="methodPrintArray"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method PrintArray</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1314">1314</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>PrintArray(
+mixed
+$array, [mixed
+$heading = ''])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to print an array within pre tags, debug use</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $array</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodprofile" id="methodprofile"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method profile</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1205">1205</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>profile(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function used to output class profile</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodsave_cache" id="methodsave_cache"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method save_cache</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1572">1572</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>save_cache(
+string
+$name, mixed
+$value, [string
+$method = 'RETURN'], [integer
+$gzip = 1], [integer
+$global = 0], [string
+$expires = '30/days'])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to save the cache to database</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: Cache name</li>
+			<li><strong>mixed $value</strong>: Can be array, string, PHP code, or just about anything</li>
+			<li><strong>string $method</strong>: RETURN, ARRAY, EVAL</li>
+			<li><strong>integer $gzip</strong>: Enables compression</li>
+			<li><strong>integer $global</strong>: Sets whether cache record is global is scope</li>
+			<li><strong>string $expires</strong>: Sets the expiration</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodSessionID" id="methodSessionID"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method SessionID</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1385">1385</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>SessionID(
+[string
+$sessid = ''])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to return the session ID</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $sessid</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodSessionName" id="methodSessionName"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method SessionName</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1400">1400</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>SessionName(
+[string
+$name = ''])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to return the session name</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodshort_name" id="methodshort_name"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method short_name</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1273">1273</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>short_name(
+string
+$str, [integer
+$limit = 3])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to return the short word filtered string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $str</strong>: </li>
+			<li><strong>integer $limit</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Short word filtered</li>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodstart" id="methodstart"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method start</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1329">1329</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>start(
+float
+&$start_time)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to start time for performance metric</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>float $start_time</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodstock_href_link" id="methodstock_href_link"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method stock_href_link</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a648">648</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>stock_href_link(
+[mixed
+$page = ''], [mixed
+$parameters = ''], [mixed
+$connection = 'NONSSL'], [mixed
+$add_session_id = true], [mixed
+$search_engine_safe = true])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Stock function, fallback use</h5>
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodstop" id="methodstop"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method stop</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1340">1340</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>stop(
+float
+$start, float
+&$time)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to stop time for performance metric</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>float $start</strong>: </li>
+			<li><strong>float $time</strong>: NOTE: passed by reference</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodstrip" id="methodstrip"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method strip</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a1232">1232</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>strip(
+string
+$string)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to strip the string of punctuation and white space</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $string</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Stripped text. Removes all non-alphanumeric characters.</li>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Sun, 12 Jun 2005 14:35:29 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</div>
+</body>
+</html>

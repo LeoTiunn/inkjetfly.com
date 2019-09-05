@@ -1,0 +1,174 @@
+UPS Worldship XML Auto Import
+written by Thuan V. Nguyen, http://www.a8le.com
+**********************************************************************************
+
+About
+**********************************************************************************
+This contribution allows you to process your UPS Worldship orders with the click of a link. 
+The links are located in the order's details page.
+
+Required
+**********************************************************************************
+UPS Worldship software that can be ordered free here:  http://www.ups.com/orderworldship?loc=en_US .
+A UPS account to order and use the UPS Worldship software.
+A daily UPS pick-up required for use of the software.
+
+You must have UPS Worldship running, specifically... you must have their "XML Auto Import" running.  
+It can be found under the "UPS Online Connect" tab... once you click on the "XML Auto Import". 
+A new window will open up... there you will see a start button, click "Start".
+Instructions straight from UPS: http://ups.com/media/en/XML_Technical_Support_Guide_Final.pdf
+
+History
+**********************************************************************************
+v1.0 Initial version
+v1.1 Updated Weight to get extracted from the order
+     Updated Customer id  from Customers_id instead of Orders_id
+     Using 2 letter state
+     Added reference2
+     Updated button image
+v1.2 Changed back Customer id  from Customers_id to Orders_id, no way for osCommerce Admin/User to reference customer_id w/out go to DB
+     Fixed Company/Name statement
+     Removed Link from button image and added 7 UPS ServiceType Links
+     Added upgrade instructions
+v1.2.1
+     Added links to orders main page along with method to keep you from always having to click on each order.
+v1.3
+     Fixed Error with Company name not showing up properly and removed att if being shipped to non company. 
+     
+
+Future Plans (if you can do it, please help move this contribution forward)
+**********************************************************************************
+7 new UPS ServiceType Links could be fancier, maybe javascript, maybe css.
+User data has to be entered in via the ups_print_worldship_xml.php in code... should be configurable thru admin.
+Would be nice if tracking number could be read from UPS's AUTO XML IMPORT output file and inputted in order comment and customer notified.
+Some of the options are hard coded into this contribution... ie/ number of packages and something I haven't noticed.
+      
+How to install:**********************************************************************************
+PLEASE BACKUP YOUR FILES
+
+1.) Open ups_print_worldship_xml.php ... enter in your data ... marked "editable variables"
+2.) Copy ups_print_worldship_xml.php to /catalog/admin/includes/
+3.) Copy button_export_to_ups.gif to /catalog/admin/includes/languages/english/images/buttons/
+4.) In admin/orders.php
+
+-----
+FIND:
+-----
+      case 'deleteconfirm':
+        $oID = tep_db_prepare_input($HTTP_GET_VARS['oID']);
+
+        tep_remove_order($oID, $HTTP_POST_VARS['restock']);
+
+        tep_redirect(tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('oID', 'action'))));
+        break;
+
+
+-------------------
+ADD RIGHT BELOW IT:
+-------------------
+        // ups export
+        case 'ups_export':
+        require('includes/ups_print_worldship_xml.php');
+        // ups_worldship will not return
+        break;
+
+-----
+FIND:
+-----
+
+      <tr>
+       <td colspan="2" align="right"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS_EDIT, 'oID=' . $_GET['oID']) . '">' . tep_image_button('button_edit.gif', IMAGE_EDIT) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_INVOICE, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_invoice.gif', IMAGE_ORDERS_INVOICE) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_PACKINGSLIP, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_packingslip.gif', IMAGE_ORDERS_PACKINGSLIP) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action'))) . '">' . tep_image_button('button_back.gif', IMAGE_BACK) . '</a> '; ?></td>
+      </tr>
+
+-------------
+REPLACE WITH:
+-------------
+
+      <tr>
+       <td colspan="2" align="right" valign="top" nowrap="nowrap">
+		<table>
+			<tr><td valign="top" nowrap="nowrap"><?php echo tep_image_button('button_export_to_ups.gif', Export_To_UPS)?></td><td><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS_EDIT, 'oID=' . $_GET['oID']) . '">' . tep_image_button('button_edit.gif', IMAGE_EDIT) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_INVOICE, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_invoice.gif', IMAGE_ORDERS_INVOICE) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_PACKINGSLIP, 'oID=' . $_GET['oID']) . '" TARGET="_blank">' . tep_image_button('button_packingslip.gif', IMAGE_ORDERS_PACKINGSLIP) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action'))) . '">' . tep_image_button('button_back.gif', IMAGE_BACK) . '</a> '; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=GND' . '" style="font-size:larger;">' . 'UPS Ground' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=3DS' . '">' . 'UPS 3 Day Select' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DA' . '">' . 'UPS 2nd Day Air' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DM' . '">' . 'UPS 2nd Day Air A.M.' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DP' . '">' . 'UPS Next Day Air Saver' . '</a>'; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DA' . '">' . 'UPS Next Day Air' . '</a> '; ?></td></tr>
+			<tr><td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DM' . '">' . 'UPS Next Day Air Early A.M.' . '</a>'; ?></td></tr>
+		</table>		   
+	   </td>
+      </tr>
+	  
+
+
+Line 416 after:
+    default:
+      if (isset($oInfo) && is_object($oInfo)) {
+        $heading[] = array('text' => '<b>[' . $oInfo->orders_id . ']&nbsp;&nbsp;' . tep_datetime_short($oInfo->date_purchased) . '</b>');
+
+        $contents[] = array('align' => 'center', 'text' => '<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('oID', 'action')) . 'oID=' . $oInfo->orders_id . '&action=edit') . '">' . tep_image_button('button_edit.gif', IMAGE_EDIT) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('oID', 'action')) . 'oID=' . $oInfo->orders_id . '&action=delete') . '">' . tep_image_button('button_delete.gif', IMAGE_DELETE) . '</a>');
+        $contents[] = array('align' => 'center', 'text' => '<a href="' . tep_href_link(FILENAME_ORDERS_INVOICE, 'oID=' . $oInfo->orders_id) . '" TARGET="_blank">' . tep_image_button('button_invoice.gif', IMAGE_ORDERS_INVOICE) . '</a> <a href="' . tep_href_link(FILENAME_ORDERS_PACKINGSLIP, 'oID=' . $oInfo->orders_id) . '" TARGET="_blank">' . tep_image_button('button_packingslip.gif', IMAGE_ORDERS_PACKINGSLIP) . '</a>');
+        $contents[] = array('text' => '<br>' . TEXT_DATE_ORDER_CREATED . ' ' . tep_date_short($oInfo->date_purchased));
+        if (tep_not_null($oInfo->last_modified)) $contents[] = array('text' => TEXT_DATE_ORDER_LAST_MODIFIED . ' ' . tep_date_short($oInfo->last_modified));
+        $contents[] = array('text' => '<br>' . TEXT_INFO_PAYMENT_METHOD . ' '  . $oInfo->payment_method);
+
+
+-------------
+REPLACE WITH (before the last "}"
+-------------                
+         $rqShipping = tep_db_query("SELECT title FROM " . TABLE_ORDERS_TOTAL . " WHERE orders_id = " . $oInfo->orders_id . " AND class = 'ot_shipping'");
+        $shipping = tep_db_fetch_array($rqShipping);
+        $ship_method = substr(preg_replace(array('/^United States Postal Service/', '/^US Postal Service/'),'USPS',$shipping['title']),0,-1);
+        $contents[] = array('text' => '<br>' . TEXT_INFO_SHIPPING_METHOD . ' ' . (preg_match('/Priority/',$ship_method)? $ship_method : '<b>' . $ship_method . '</b>'));
+       
+     
+        if (preg_match('/^United/',$ship_method)) {
+          $contents[] = array('align' => 'center', 'text' => '
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=GND' . '">' . 'UPS Ground' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=3DS' . '">' . 'UPS 3 Day Select' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DA' . '">' . 'UPS 2nd Day Air' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=2DM' . '">' . 'UPS 2nd Day Air A.M.' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DP' . '">' . 'UPS Next Day Air Saver' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DA' . '">' . 'UPS Next Day Air' . '</a><br />
+			<a href="' . tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('action')) . '&action=ups_export') . '&ups_method=1DM' . '">' . 'UPS Next Day Air Early A.M.' . '</a><br />');
+          }    
+
+
+
+
+Usage
+****************************************************************************************************************
+Go into the OSC Admin->Orders and then view an order that you would like to have the shipping data exported. 
+To do this... click on "Details" or double click on the order). 
+At the bottom, look for the "EXPORT Label To Worldship" Image. 
+Click on the desired service type, then when asked... save the file to the "XML AUTO IMPORT" directory.  
+
+If left default should be: C:\UPS\WSTD\ImpExp\XML Auto Import\
+Remember: UPS Worldship's "XML AUTO IMPORT" must be running
+If everything goes out right, you will get a print out with shipping sticker/label
+
+Thats it, enjoy.
+-Thuan
+
+
+
+
+
+
+
+
+Step 4:
+======================
+Edit: admin/orders.php
+
+
+
+         
+
+
+Change Log:
+============================================
+11/14/06 - v2.0.3 (both mods thanks to SteveDallas)
+usps_ship.php - line 23 Replaced package ID equation to make packages show up in order at USPS 
+usps_ship.php - lines 49 -52 Replaced to retreive actual values since "it breaks on amounts of $1000 and over, if you use commas as the thousands separator" 
+

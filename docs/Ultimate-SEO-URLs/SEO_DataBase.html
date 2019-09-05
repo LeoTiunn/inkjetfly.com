@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class SEO_DataBase</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class SEO_DataBase
+</h2> (line <span class="linenumber"><a href="../__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a30">30</a></span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_classes_seo_class_php.html">seo.class.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>SEO_DataBase Class</h5>
+<div class="desc"><p>The SEO_DataBase class provides abstraction so the databaes can be accessed  without having to use tep API functions. This class has minimal error handling  so make sure your code is tight!</p></div>
+<ul>
+		<li><strong>author:</strong> - Bobby Easland</li>
+		<li><strong>copyright:</strong> - Copyright 2005, Bobby Easland</li>
+		<li><strong>link:</strong> - <a href="http://www.oscommerce-freelancers.com/">osCommerce-Freelancers</a></li>
+		<li><strong>version:</strong> - 1.1</li>
+		<li><strong>license:</strong> - <a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$db" title="details" class="property"><strong>$db</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$host" title="details" class="property"><strong>$host</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">resource</span>
+    <a href="#var$link_id" title="details" class="property"><strong>$link_id</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$pass" title="details" class="property"><strong>$pass</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$user" title="details" class="property"><strong>$user</strong></a>
+</div>
+<hr />
+<a name="var$db" id="var$db"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$db</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a45">45</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Database name</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$host" id="var$host"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$host</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a35">35</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Database host (localhost, IP based, etc)</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$link_id" id="var$link_id"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$link_id</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a55">55</a></span>)
+ </h4>
+<h4>Data type : resource</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Database link</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$pass" id="var$pass"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$pass</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a50">50</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Database password</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$user" id="var$user"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$user</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a40">40</a></span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Database user</h5>
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+				
+    <div class="method-definition">
+            <span class="method-result">SEO_DataBase</span>
+        <a href="#methodSEO_DataBase" title="details" class="method-name">SEO_DataBase</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$db</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodConnectDB" title="details" class="method-name">ConnectDB</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">resource</span>
+        <a href="#methodDBPerform" title="details" class="method-name">DBPerform</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">'insert'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$parameters</span> = <span class="var-default">''</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodFetchArray" title="details" class="method-name">FetchArray</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$resource_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">MYSQL_BOTH</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodFree" title="details" class="method-name">Free</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$resource_id</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">integer</span>
+        <a href="#methodInsertID" title="details" class="method-name">InsertID</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodNumRows" title="details" class="method-name">NumRows</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$resource_id</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">resource</span>
+        <a href="#methodQuery" title="details" class="method-name">Query</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">resoource</span>
+        <a href="#methodSelectDB" title="details" class="method-name">SelectDB</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodSlashes" title="details" class="method-name">Slashes</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodSEO_DataBase" id="methodSEO_DataBase"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor SEO_DataBase</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a66">66</a></span>)
+ </h4> 
+<h4><i>SEO_DataBase</i> <strong>SEO_DataBase(
+string
+$host, string
+$user, string
+$db, string
+$pass)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>MySQL_DataBase class constructor</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $host</strong>: </li>
+			<li><strong>string $user</strong>: </li>
+			<li><strong>string $db</strong>: </li>
+			<li><strong>string $pass</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodConnectDB" id="methodConnectDB"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method ConnectDB</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a80">80</a></span>)
+ </h4> 
+<h4><i>void</i> <strong>ConnectDB(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to connect to MySQL</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.1</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodDBPerform" id="methodDBPerform"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method DBPerform</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a170">170</a></span>)
+ </h4> 
+<h4><i>resource</i> <strong>DBPerform(
+string
+$table, array
+$data, [string
+$action = 'insert'], [string
+$parameters = ''])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to perform DB inserts and updates - abstracted from osCommerce-MS-2.2 project</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $table</strong>: Database table</li>
+			<li><strong>array $data</strong>: Associative array of columns / values</li>
+			<li><strong>string $action</strong>: insert or update</li>
+			<li><strong>string $parameters</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodFetchArray" id="methodFetchArray"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method FetchArray</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a113">113</a></span>)
+ </h4> 
+<h4><i>array</i> <strong>FetchArray(
+resource
+$resource_id, [string
+$type = MYSQL_BOTH])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to fetch array</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $resource_id</strong>: </li>
+			<li><strong>string $type</strong>: MYSQL_BOTH or MYSQL_ASSOC</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodFree" id="methodFree"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method Free</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a145">145</a></span>)
+ </h4> 
+<h4><i>boolean</i> <strong>Free(
+resource
+$resource_id)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to free the resource</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $resource_id</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodInsertID" id="methodInsertID"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method InsertID</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a134">134</a></span>)
+ </h4> 
+<h4><i>integer</i> <strong>InsertID(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to fetch the last insertID</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodNumRows" id="methodNumRows"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method NumRows</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a124">124</a></span>)
+ </h4> 
+<h4><i>mixed</i> <strong>NumRows(
+resource
+$resource_id)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to fetch the number of rows</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $resource_id</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodQuery" id="methodQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method Query</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a101">101</a></span>)
+ </h4> 
+<h4><i>resource</i> <strong>Query(
+string
+$query)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to perform queries</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $query</strong>: SQL statement</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodSelectDB" id="methodSelectDB"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method SelectDB</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a90">90</a></span>)
+ </h4> 
+<h4><i>resoource</i> <strong>SelectDB(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to select the database</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<a name="methodSlashes" id="methodSlashes"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method Slashes</strong> (line <span class="linenumber"><a href="..//__filesource/fsource_Ultimate-SEO-URLs__seo.class.php.html#a156">156</a></span>)
+ </h4> 
+<h4><i>string</i> <strong>Slashes(
+string
+$data)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Function to add slashes</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $data</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>version</strong> - 1.0</li>
+			<li><strong>author</strong> - Bobby Easland</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Sun, 12 Jun 2005 14:35:29 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</div>
+</body>
+</html>

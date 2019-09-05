@@ -1,0 +1,502 @@
+<html>
+<head>
+<title>Ultimate SEO URLs Upgrade Documentation</title>
+<link rel="stylesheet" href="media/stylesheet.css" />
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+<style>
+body{
+	background-attachment: fixed;
+	background-image: url(http://forums.oscommerce.com/uploads/av-9196.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+</style>
+</head>
+<body>
+<!-- 
+This document is licensed under the Open Public License v1.0
+Should this document fall in violation of this Public License 1.0 the scripts
+contained within this package will also revert to Open Public License v1.0
+and will no longer be considered GNU Public License and must be removed from 
+public access.
+
+http://koala.ilog.fr/jackaroo/OPL_1_0.TXT
+
+Short story - don't fuck with install directions osCommerce team
+-->
+<div align="center">
+    <h1>Ultimate SEO URLs Upgrade Documentation - by <a href="http://forums.oscommerce.com/index.php?showuser=9196" target="_blank">Chemo</a> </h1>
+</div>
+<p><b>Welcome to Ultimate SEO URLs contribution upgrade documentation!</b></p>
+<br/>
+<p class="doc_headline">What version do you have installed currently?</p>
+<blockquote>
+    <p>It should be noted that this version DOES NOT support the cName method of URL generation. Thus, if you currently use or need the cName method DO NOT UPGRADE.</p>
+    <br/>
+	<p>There are 2 separate directions here for upgrading depending on which version you CURRENTLY have installed.</p>
+</blockquote>
+<p class="doc_headline">UPGRADE v2.1x series- osCommerce MS-2.2</p>
+<br/>
+<fieldset>
+<legend>STEP #1 - Upload the class file (<font color="#990000">overwrite</font>) </legend>
+<ul>
+<li>The class file <i><b>seo.class.php</b></i> should be uploaded to <b>includes/classes/</b>seo.class.php (<b><font color="#990000">ovewrite</font></b>) </li>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #2 - Call the store in your favorite browser</legend>
+<ul>
+<li>The installer class will detect that new settings are present and install them automatically. </li>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #3 - Re-configure through the admin control panel </legend>
+<ul>
+<li>Reference below (<font color="#990000"><b>STEP #8</b></font>) for the new settings and also their default values </li>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend>OPTIONAL - Drink a cold beer and ponder why other contributions are not so easy to upgrade </legend>
+<ul>
+<li><b>NOTE</b>: If this optional step is completed you must drink one for me too :-) </li>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend><font color="#990000">BUG FIXES</font></legend>
+<ul>
+<li><b><a href="bug_fixes.html#fatal_error" target="right">Fatal error</a></b><a href="bug_fixes.html#fatal_error">: Call to a member function on a non-object in /path/to/html_output.php on line 43</a></li>
+</ul>
+</fieldset>
+<br/>
+<hr/>
+<br/>
+<p class="doc_headline">UPGRADE v1.x-v2.0b series- osCommerce MS-2.2</p>
+<br/>
+<fieldset>
+<legend>STEP #1 - Upload the class file (versions 2.0b - 1.X) </legend>
+<ul>
+<li>The class file <i><b>seo.class.php</b></i> should be uploaded to <b>includes/classes/</b>seo.class.php</li>
+<li>The update file <i><b>reset_seo_cache.php</b></i> should be uploaded to <b>admin/includes/</b>reset_seo_cache.php</li>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #2 - Edit includes/application_top.php (versions 2.0b - 1.X)</legend>
+<p>This step basically removs the existing SEO URLs code from application_top.php and replaces it with the new code.</p>
+<br/>
+<p><b>Find this code:</b></p>
+    <textarea cols="76" rows="18"># include the cache class
+	include('includes/classes/cache.class.php');
+	$cache = new cache($languages_id);
+# include the Ultimate SEO URLs cache file
+	include('includes/seo_cache.php');
+	# Get the cache - no parameters will get all GLOBAL cache entries for this language
+	$cache->get_cache('GLOBAL');
+
+
+if ( isset($HTTP_GET_VARS['cName']) && defined(urldecode($HTTP_GET_VARS['cName'])) ) {
+	$cPath = str_replace( 'cPath=', '', constant(urldecode($HTTP_GET_VARS['cName'])) );
+	$HTTP_GET_VARS['cPath'] = $cPath;
+}
+if (isset($HTTP_GET_VARS['pName']) && defined(urldecode($HTTP_GET_VARS['pName'])) ) {
+	$pid = str_replace('products_id=', '', constant(urldecode($HTTP_GET_VARS['pName'])));
+	$HTTP_GET_VARS['products_id'] = (int)$pid;
+}
+</textarea>
+<p><b>Replace with this code:</b></p>
+<textarea cols="76" rows="3">
+// Ultimate SEO URLs v2.1
+    include_once(DIR_WS_CLASSES . 'seo.class.php');
+    $seo_urls = new SEO_URL($languages_id);
+</textarea>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #3 - Edit includes/functions/html_output.php</legend>
+<p><b>Find the tep_href_link() function:</b></p>
+<textarea cols="76" rows="20">
+////
+// The HTML href link wrapper function
+  function tep_href_link($page = '', $parameters = '', $connection = 'NONSSL', $add_session_id = true, $search_engine_safe = true) {
+    global $request_type, $session_started, $SID;
+
+	$seo = ( defined('SEO_URLS') ? SEO_URLS : false );
+	$seo_rewrite_type = ( defined('SEO_URLS_TYPE') ? SEO_URLS_TYPE : false );
+	$seo_pages = array('index.php', 'product_info.php');
+	if ( !in_array($page, $seo_pages) ) $seo = false;
+
+    if (!tep_not_null($page)) {
+      die('</td></tr></table></td></tr></table><br><br><font color="#ff0000"><b>Error!</b></font><br><br><b>Unable to determine the page link!<br><br>');
+    }
+	
+	if ($page == '/') $page = '';
+	
+    if ($connection == 'NONSSL') {
+      $link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+      $seo_link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+	  $seo_rewrite_link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+    } elseif ($connection == 'SSL') {
+      if (ENABLE_SSL == true) {
+        $link = HTTPS_SERVER . DIR_WS_HTTPS_CATALOG;
+        $seo_link = HTTPS_SERVER . DIR_WS_HTTPS_CATALOG;
+        $seo_rewrite_link = HTTPS_SERVER . DIR_WS_HTTPS_CATALOG;
+      } else {
+        $link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+        $seo_link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+        $seo_rewrite_link = HTTP_SERVER . DIR_WS_HTTP_CATALOG;
+      }
+    } else {
+      die('</td></tr></table></td></tr></table><br><br><font color="#ff0000"><b>Error!</b></font><br><br><b>Unable to determine connection method on a link!<br><br>Known methods: NONSSL SSL</b><br><br>');
+    }
+
+    if (tep_not_null($parameters)) {
+      $link .= $page . '?' . tep_output_string($parameters);      
+	  $separator = '&';
+
+		# Start exploding the parameters to extract the values
+		# Also, we could use parse_str($parameters) and would probably be more clean
+		if ($seo == 'true'){
+			$p = explode('&', $parameters);
+			krsort($p);
+			$params = array();
+			
+			if ( $seo_rewrite_type == 'Rewrite' ){
+				foreach ($p as $index => $valuepair) {
+					$p2 = explode('=', $valuepair);					
+					switch ($p2[0]){				
+					case 'products_id':
+						$rewrite_product = true;					 
+						if ( defined('PRODUCT_NAME_'.$p2[1]) ){
+							$rewrite_page_product = short_name(constant('PRODUCT_NAME_'.$p2[1])) . '-p-' . $p2[1] . '.html';
+						} else { $seo = false; }
+						break;		
+					
+					case 'cPath': 
+						$rewrite_category = true;
+						if ( defined('CATEGORY_NAME_'.$p2[1]) ){
+							$rewrite_page_category = short_name(constant('CATEGORY_NAME_'.$p2[1])) . '-c-' . $p2[1] . '.html';
+						} else { $seo = false; }
+						break;
+// manufacturer addition by WebPixie
+					case 'manufacturers_id': 
+						$rewrite_manufacturer = true;
+						if ( defined('MANUFACTURER_NAME_'.$p2[1]) ){
+							$rewrite_page_manufacturer = short_name(constant('MANUFACTURER_NAME_'.$p2[1])) . '-m-' . $p2[1] . '.html';
+						} else { $seo = false; }
+						break;
+// end manufacturer addition by WebPixie
+					default:
+						$params[$p2[0]] = $p2[1]; 
+						break;
+					} # switch
+				} # end foreach
+				$params_stripped = implode_assoc($params);
+				switch (true){
+					case ( $rewrite_product && $rewrite_category ):
+					case ( $rewrite_product ):
+						$rewrite_page = $rewrite_page_product;
+						$rewrite_category = false;
+						break;
+					case ( $rewrite_category ):
+						$rewrite_page = $rewrite_page_category;
+						break;
+// manufacturer addition by WebPixie
+					case ( $rewrite_manufacturer ):
+						$rewrite_page = $rewrite_page_manufacturer;
+						break;
+// end manufacturer addition by WebPixie
+					default:
+						$seo = false;
+						break;
+				} #end switch true	
+				$seo_rewrite_link .= $rewrite_page . ( tep_not_null($params_stripped) ? '?'.tep_output_string($params_stripped) : '' );   
+				$separator = ( tep_not_null($params_stripped) ? '&' : '?' );
+			} else {
+				foreach ($p as $index => $valuepair) {
+					$p2 = explode('=', $valuepair);					
+					switch ($p2[0]){				
+					case 'products_id':					 
+						if ( defined('PRODUCT_NAME_'.$p2[1]) ){
+							$params['pName'] = constant('PRODUCT_NAME_'.$p2[1]);
+						} else { $seo = false; }
+						break;		
+					
+					case 'cPath': 
+						if ( defined('CATEGORY_NAME_'.$p2[1]) ){
+							$params['cName'] = constant('CATEGORY_NAME_'.$p2[1]);
+						} else { $seo = false; }
+						break;
+// manufacturer addition by WebPixie
+					case 'manufacturers_id': 
+						if ( defined('MANUFACTURER_NAME_'.$p2[1]) ){
+							$params['mName'] = constant('MANUFACTURER_NAME_'.$p2[1]);
+						} else { $seo = false; }
+						break;			
+// end manufacturer addition by WebPixie		
+					default:
+						$params[$p2[0]] = $p2[1]; 
+						break;
+					} # switch
+				} # end foreach			
+				$params_stripped = implode_assoc($params);	
+				$seo_link .= $page . '?'.tep_output_string($params_stripped);   
+				$separator = '&';
+			} # end if/else
+		} # end if $seo
+	} else {
+      $link .= $page;
+      $separator = '?';
+	  $seo = false;
+    } # end if(tep_not_null($parameters)
+
+    while ( (substr($link, -1) == '&') || (substr($link, -1) == '?') ) $link = substr($link, 0, -1);
+
+// Add the session ID when moving from different HTTP and HTTPS servers, or when SID is defined
+    if ( ($add_session_id == true) && ($session_started == true) && (SESSION_FORCE_COOKIE_USE == 'False') ) {
+      if (tep_not_null($SID)) {
+        $_sid = $SID;
+      } elseif ( ( ($request_type == 'NONSSL') && ($connection == 'SSL') && (ENABLE_SSL == true) ) || ( ($request_type == 'SSL') && ($connection == 'NONSSL') ) ) {
+        if (HTTP_COOKIE_DOMAIN != HTTPS_COOKIE_DOMAIN) {
+          $_sid = tep_session_name() . '=' . tep_session_id();
+        }
+      }
+    }
+
+    if ( (SEARCH_ENGINE_FRIENDLY_URLS == 'true') && ($search_engine_safe == true) ) {
+      while (strstr($link, '&&')) $link = str_replace('&&', '&', $link);
+      while (strstr($seo_link, '&&')) $seo_link = str_replace('&&', '&', $seo_link);
+
+      $link = str_replace('?', '/', $link);
+      $link = str_replace('&', '/', $link);
+      $link = str_replace('=', '/', $link);
+      $seo_link = str_replace('?', '/', $seo_link);
+      $seo_link = str_replace('&', '/', $seo_link);
+      $seo_link = str_replace('=', '/', $seo_link);
+      $seo_rewrite_link = str_replace('?', '/', $seo_rewrite_link);
+      $seo_rewrite_link = str_replace('&', '/', $seo_rewrite_link);
+      $seo_rewrite_link = str_replace('=', '/', $seo_rewrite_link);
+
+      $separator = '?';
+    }
+
+	if (isset($_sid)) {
+		$link .= $separator . $_sid;
+	  	$seo_link .= $separator . $_sid;
+	  	$seo_rewrite_link .= $separator . $_sid;
+	}
+   
+	if ($seo == 'true') {
+		return ($seo_rewrite_type == 'Rewrite' ? $seo_rewrite_link : $seo_link);
+	} else {
+		return $link;
+	}
+  }
+</textarea>
+<p><b>And REPLACE with this function:</b></p>
+<textarea cols="76" rows="7">
+////
+// Ultimate SEO URLs v2.1
+// The HTML href link wrapper function
+  function tep_href_link($page = '', $parameters = '', $connection = 'NONSSL', $add_session_id = true, $search_engine_safe = true) {
+		global $seo_urls;
+		return $seo_urls->href_link($page, $parameters, $connection, $add_session_id);
+  }
+</textarea>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #4 - Edit admin/categories.php (<font color="#990000">this step is only for v1.4 upgrades!</font>) </legend>
+<p><b> Find this code:</b></p>
+<textarea cols="76" rows="2">  $action = (isset($HTTP_GET_VARS['action']) ? $HTTP_GET_VARS['action'] : '');
+</textarea>
+<p><b>Directly AFTER add this:</b></p>
+<textarea cols="76" rows="3">
+// Ultimate SEO URLs v2.1
+// If the action will affect the cache entries
+    if ( eregi("(insert|update|setflag)", $action) ) include_once('includes/reset_seo_cache.php');
+</textarea>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #5 - Edit admin/includes/functions/general.php (<font color="#990000">this step is only for v1.4 upgrades!</font>) </legend>
+<p><b>Add this code to the file just above the ending ?> tag:</b></p>
+<textarea cols="76" rows="16">
+// Function to reset SEO URLs database cache entries 
+// Ultimate SEO URLs v2.1
+function tep_reset_cache_data_seo_urls($action){	
+	switch ($action){
+		case 'reset':
+			tep_db_query("DELETE FROM cache WHERE cache_name LIKE '%seo_urls%'");
+			tep_db_query("UPDATE configuration SET configuration_value='false' WHERE configuration_key='SEO_URLS_CACHE_RESET'");
+			break;
+		default:
+			break;
+	}
+	# The return value is used to set the value upon viewing
+	# It's NOT returining a false to indicate failure!!
+	return 'false';
+}
+</textarea>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #6 - Edit .htaccess file (in your catalog directory) </legend>
+<p><b class="highlight">If your store is located in a DIRECTORY</b> add this to the <b>/*directory*/.htaccess file</b>:</p>
+<p><b>NOTE:</b> you will have to edit the &quot;directory&quot; to match your directory name!</p>
+<textarea cols="76" rows="15">
+Options +FollowSymLinks
+RewriteEngine On 
+RewriteBase /directory/
+
+RewriteRule ^(.*)-p-(.*).html$ product_info.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-c-(.*).html$ index.php?cPath=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-m-([0-9]+).html$ index.php?manufacturers_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pi-([0-9]+).html$ popup_image.php?pID=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-t-([0-9]+).html$ articles.php?tPath=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-a-([0-9]+).html$ article_info.php?articles_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pr-([0-9]+).html$ product_reviews.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pri-([0-9]+).html$ product_reviews_info.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-i-([0-9]+).html$ information.php?info_id=$2&%{QUERY_STRING}
+</textarea>
+<p><b>If your store is located in the root add this to the /.htaccess file:</b></p>
+<textarea cols="76" rows="15">
+Options +FollowSymLinks
+RewriteEngine On 
+RewriteBase /
+
+RewriteRule ^(.*)-p-(.*).html$ product_info.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-c-(.*).html$ index.php?cPath=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-m-([0-9]+).html$ index.php?manufacturers_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pi-([0-9]+).html$ popup_image.php?pID=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-t-([0-9]+).html$ articles.php?tPath=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-a-([0-9]+).html$ article_info.php?articles_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pr-([0-9]+).html$ product_reviews.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-pri-([0-9]+).html$ product_reviews_info.php?products_id=$2&%{QUERY_STRING}
+RewriteRule ^(.*)-i-([0-9]+).html$ information.php?info_id=$2&%{QUERY_STRING}
+</textarea>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #7 - Test the installation</legend>
+<p>Call your store in your favorite broswer! The contribution should be functional out of the box and <b>all database settings will be installed automatically on first page request</b>. The contribution has an intelligent database installer that detects whether the proper settings are present and if not will install them.</p>
+<br/>
+<p>You may need to clear your cache files to ensure that all URLs generated are fresh.</p>
+<br/>
+<p>Click a few links and verify everything is functional. Test the add to cart and buy now buttons if you use them. Once you verify everything is working it's time to configure the contribution.</p>
+</fieldset>
+<br/>
+<fieldset>
+<legend>STEP #8 - Configuration</legend>
+<p>You will find a new setting group in your admin control panel under <b>Configuration =&gt; SEO URLs</b></p>
+<ul>
+    <li><b>Enable SEO URLs?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the SEO URLs contribution globally.</li>
+    </ul>
+    <li><b>Add cPath to product URLs? <font color="#990000">*NEW*</font> </b></li>
+    <ul>
+        <li>Default Setting: false</li>
+        <li>This setting enables/disables the option of adding the cPath parameter to the end of product pages.</li>
+        <li><b>Example:</b> some-product-p-1.html?cPath=xx</li>
+    </ul>
+    <li><b>Add category parent to begining of URLs? <font color="#990000">*NEW*</font></b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of adding the category parent to the beginning of category URLs.  This was added to maintain backward compatibility with <= 2.0b releases.</li>
+        <li><b>Example:</b> parent-category-p-1.html</li>
+    </ul>
+    <li><b>Choose URL Rewrite Type</b></li>
+    <ul>
+        <li>Default Setting: Rewrite</li>
+        <li>This setting selection of URL rewrite types. Currently, there is only the 1 type (Rewrite) but in the future there will be more. </li>
+    </ul>
+    <li><b>Filter Short Words</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting allows a store owner to filter short words which typically add no value. Don't set this too high! </li>
+    </ul>
+    <li><b>Output W3C valid URLs (parameter string)? <font color="#990000">*NEW*</font></b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting allows a store owner to choose W3C valid URLs.</li>
+    </ul>
+    <li><b>Enable SEO cache to save queries?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the query cache engine globally. If disabled each URL generated will take 1 query. </li>
+    </ul>
+    <li><b>Enable product cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the products.</li>
+    </ul>
+    <li><b>Enable categories cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the categories. </li>
+    </ul>
+    <li><b>Enable manufacturers cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the manufacturers.</li>
+    </ul>
+    <li><b>Enable articles cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the articles (if installed). </li>
+    </ul>
+    <li><b>Enable information cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the information pages (if installed). </li>
+    </ul>
+    <li><b>Enable topics cache?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the option of using cache for the article topics (if installed). </li>
+    </ul>
+    <li><b>Enable automatic redirects?</b></li>
+    <ul>
+        <li>Default Setting: true</li>
+        <li>This setting enables/disables the automatic 301 header redirect logic. This sends a moved permanent header for all old URLs to the new ones. <i>This setting is highly recommended for stores that have already been indexed by spiders.</i> </li>
+    </ul>
+    <li><b>Enter special character conversions</b></li>
+    <ul>
+        <li>Default Setting: <i>NULL</i> </li>
+        <li>This setting allows a store owner to enter a list of special character conversions. Please note the format below.</li>
+        <li><b>FORMAT</b>: char=&gt;conv, char2=&gt;conv2, char3=&gt;conv3</li>
+        <li>NOTE: use a comma as the separator </li>
+    </ul>
+    <li><b>Remove all non-alphanumeric characters?</b></li>
+    <ul>
+        <li>Default Setting: false</li>
+        <li>This setting allows the store owner to remove all non-alphanumeric characters from the URL. This is highly effective and will result in some interesting URLs. For example, <b>some-product-p-1.html</b> will become <b>someproduct-p-1.html</b> </li>
+    </ul>
+    <li><b>Reset SEO URLs Cache </b></li>
+    <ul>
+        <li>Default Setting: false </li>
+        <li>This setting allows the store owner to clear the SEO cache manually.</li>
+    </ul>
+</ul>
+</fieldset>
+<br/>
+<fieldset>
+<legend>OPTIONAL - Performance Monitoring and Assessment</legend>
+<p>In includes/application_bottom.php paste this code just after the opening PHP tag:</p>
+<textarea cols="76" rows="5">
+  if ( $_REQUEST['profile'] == 'on' || $_SESSION['profile'] == 'on' ) {
+  	$_SESSION['profile'] = isset($_REQUEST['profile']) ? $_REQUEST['profile'] : 'on';
+	$seo_urls->profile();
+  }
+</textarea>
+<p>To activate the performance diagnostic code append <b>?profile=on</b> to any URL which will save the setting to your session. Now you should see the performance profile data at the footer. You can browse the catalog and the output will be at the footer. This will allow you to quickly assess the performance of the homepage, category, and product pages.  To turn it back off append <b>?profile=off</b> to any URL.  </p>
+</fieldset>
+<hr/>
+<p>This documentation was generated by <a href="http://www.phpdoc.org">phpDocumentor v1.3.0RC3</a></p>
+</body>
+</html>
